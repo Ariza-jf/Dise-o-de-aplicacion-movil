@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UniEmprende | Plataforma de Emprendimientos Universitarios</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <span class="brand-icon"><i class="bi bi-rocket-takeoff-fill"></i></span>
+        <span class="brand-text">Uni<strong>Emprende</strong></span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-center gap-2">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#emprendimientos">Emprendimientos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#como-funciona">Cómo funciona</a></li>
+          <li class="nav-item" id="navUserArea">
+            <a class="btn btn-outline-light btn-sm px-3" href="pages/login.html">Iniciar sesión</a>
+          </li>
+          <li class="nav-item d-none" id="navLoggedIn">
+            <div class="d-flex align-items-center gap-2">
+              <span class="text-white-50 small" id="navUsername"></span>
+              <a class="btn btn-uni-primary btn-sm px-3" href="pages/dashboard.html">Mi espacio</a>
+              <button class="btn btn-sm btn-outline-danger" onclick="logout()">Salir</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <header class="hero-section" id="inicio">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="container text-center position-relative z-1">
+      <span class="badge-pill mb-3 d-inline-block">🎓 Universidad &amp; Emprendimiento</span>
+      <h1 class="hero-title">Donde las ideas<br/><span class="text-accent">se convierten</span><br/>en negocios</h1>
+      <p class="hero-subtitle mx-auto">
+        La plataforma oficial de emprendimientos universitarios. Registra tu negocio, conecta con la comunidad y haz crecer tu idea.
+      </p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="pages/register.html" class="btn btn-uni-primary btn-lg px-5">Registrar mi negocio</a>
+        <a href="#emprendimientos" class="btn btn-outline-light btn-lg px-5">Explorar <i class="bi bi-arrow-down ms-1"></i></a>
+      </div>
+      <div class="hero-stats mt-5 d-flex justify-content-center gap-5 flex-wrap">
+        <div class="stat-item"><span class="stat-number" data-target="48">0</span><span class="stat-label">Emprendimientos</span></div>
+        <div class="stat-item"><span class="stat-number" data-target="312">0</span><span class="stat-label">Estudiantes</span></div>
+        <div class="stat-item"><span class="stat-number" data-target="7">0</span><span class="stat-label">Facultades</span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── CÓMO FUNCIONA ── -->
+  <section class="section-how py-6" id="como-funciona">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <span class="section-tag">Proceso simple</span>
+        <h2 class="section-title">¿Cómo funciona?</h2>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="how-card text-center">
+            <div class="how-step">01</div>
+            <div class="how-icon"><i class="bi bi-person-plus-fill"></i></div>
+            <h5>Regístrate</h5>
+            <p>Crea tu cuenta con tu correo universitario y verifica tu identidad como estudiante activo.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="how-card text-center">
+            <div class="how-step">02</div>
+            <div class="how-icon"><i class="bi bi-pencil-square"></i></div>
+            <h5>Crea tu espacio</h5>
+            <p>Personaliza la página de tu emprendimiento: nombre, descripción, categoría y más.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="how-card text-center">
+            <div class="how-step">03</div>
+            <div class="how-icon"><i class="bi bi-graph-up-arrow"></i></div>
+            <h5>Crece y conecta</h5>
+            <p>Llega a toda la comunidad universitaria y haz que tu negocio emerja con fuerza.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EMPRENDIMIENTOS ── -->
+  <section class="section-emprendimientos py-6" id="emprendimientos">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <span class="section-tag">Comunidad</span>
+        <h2 class="section-title">Emprendimientos activos</h2>
+        <p class="section-subtitle">Descubre los negocios que están transformando nuestra universidad</p>
+      </div>
+
+      <!-- Filtros -->
+      <div class="d-flex justify-content-center gap-2 flex-wrap mb-4" id="filterBtns">
+        <button class="btn btn-filter active" data-cat="todos">Todos</button>
+        <button class="btn btn-filter" data-cat="tecnologia">Tecnología</button>
+        <button class="btn btn-filter" data-cat="alimentacion">Alimentación</button>
+        <button class="btn btn-filter" data-cat="moda">Moda</button>
+        <button class="btn btn-filter" data-cat="servicios">Servicios</button>
+        <button class="btn btn-filter" data-cat="arte">Arte &amp; Diseño</button>
+      </div>
+
+      <!-- Grid de tarjetas -->
+      <div class="row g-4" id="cardsContainer"></div>
+
+      <div class="text-center mt-5">
+        <a href="pages/register.html" class="btn btn-uni-primary px-5">
+          <i class="bi bi-plus-circle me-2"></i>Añadir mi emprendimiento
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <span class="brand-icon sm"><i class="bi bi-rocket-takeoff-fill"></i></span>
+            <span class="fw-bold fs-5">UniEmprende</span>
+          </div>
+          <p class="text-muted small mb-0">Plataforma oficial de emprendimientos universitarios.</p>
+        </div>
+        <div class="col-md-4 text-center mb-3 mb-md-0">
+          <div class="d-flex justify-content-center gap-3">
+            <a href="#" class="footer-link">Inicio</a>
+            <a href="#" class="footer-link">Emprendimientos</a>
+            <a href="pages/login.html" class="footer-link">Acceder</a>
+          </div>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <span class="text-muted small">© 2025 UniEmprende · Todos los derechos reservados</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- App JS -->
+  <script src="js/app.js"></script>
+</body>
+</html>
